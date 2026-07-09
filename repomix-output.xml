@@ -1,0 +1,464 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+AGENTS.md
+astro.config.mjs
+CLAUDE.md
+package.json
+public/favicon.ico
+public/favicon.svg
+README.md
+src/components/Footer.astro
+src/components/Header.astro
+src/components/Hero.astro
+src/components/MisionVision.astro
+src/components/Ubicacion.astro
+src/components/Valores.astro
+src/components/WhatsAppFloat.astro
+src/config/site.ts
+src/layouts/Layout.astro
+src/pages/index.astro
+src/styles/global.css
+tsconfig.json
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+</file>
+
+<file path="AGENTS.md">
+## Development
+
+When starting the dev server, use background mode:
+
+```
+astro dev --background
+```
+
+Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+
+## Documentation
+
+Full documentation: https://docs.astro.build
+
+Consult these guides before working on related tasks:
+
+- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
+- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
+- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
+- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
+- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
+- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+</file>
+
+<file path="astro.config.mjs">
+// @ts-check
+import { defineConfig } from "astro/config";
+
+// Ajusta a tu repo real cuando lo subas a GitHub.
+export default defineConfig({
+  site: "https://roedwin-afk.github.io",
+  base: "/comercial-josue/",
+});
+</file>
+
+<file path="CLAUDE.md">
+## Development
+
+When starting the dev server, use background mode:
+
+```
+astro dev --background
+```
+
+Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+
+## Documentation
+
+Full documentation: https://docs.astro.build
+
+Consult these guides before working on related tasks:
+
+- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
+- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
+- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
+- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
+- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
+- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+</file>
+
+<file path="package.json">
+{
+  "name": "comercial-josue",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.0.7"
+  }
+}
+</file>
+
+<file path="public/favicon.svg">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
+    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z" />
+    <style>
+        path { fill: #000; }
+        @media (prefers-color-scheme: dark) {
+            path { fill: #FFF; }
+        }
+    </style>
+</svg>
+</file>
+
+<file path="README.md">
+# Astro Starter Kit: Minimal
+
+```sh
+npm create astro@latest -- --template minimal
+```
+
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+</file>
+
+<file path="src/components/Footer.astro">
+
+</file>
+
+<file path="src/components/Header.astro">
+
+</file>
+
+<file path="src/components/Hero.astro">
+
+</file>
+
+<file path="src/components/MisionVision.astro">
+
+</file>
+
+<file path="src/components/Ubicacion.astro">
+
+</file>
+
+<file path="src/components/Valores.astro">
+
+</file>
+
+<file path="src/components/WhatsAppFloat.astro">
+
+</file>
+
+<file path="src/config/site.ts">
+// src/config/site.ts
+
+export interface NavLink {
+  label: string;
+  href: string;
+}
+
+export interface TarjetaPrecio {
+  numero: string;      // "01", "02", "03"
+  titulo: string;
+  texto: string;
+  badges?: string[];   // solo la tarjeta de productos las usa
+}
+
+export interface InfoItem {
+  tipo: "ubicacion" | "email" | "whatsapp"; // controla qué ícono se dibuja
+  label: string;       // ej. "Dirección de la sucursal"
+  valor: string;       // texto visible
+  href?: string;        // si es un link (mailto, wa.me)
+}
+
+export const siteConfig = {
+  // --- Identidad / header ---
+  nombre: "Comercial Josué",
+  logoIniciales: "CJ",
+  logoSubtitulo: "SAN MIGUEL, EL SALVADOR",
+
+  navLinks: [
+    { label: "Nosotros", href: "#nosotros" },
+    { label: "Valores", href: "#valores" },
+    { label: "Ubicación", href: "#ubicacion" },
+  ] satisfies NavLink[],
+
+  // --- Contacto ---
+  whatsappNumero: "50370000000", // ⚠️ pon el número real
+  email: "comercialjosue@gmail.com",
+
+  // --- Hero ---
+  hero: {
+    eyebrow: "Abastecimiento y Confianza",
+    tituloAntes: "Número uno en",
+    tituloAcento: "atención",
+    tituloDespues: "y precios",
+    parrafo:
+      "Tu comercial y abarrotería de confianza en San Miguel. Distribuimos productos de consumo popular al detalle y por mayor con el servicio de excelencia que mereces.",
+    mensajeWhatsapp: "Hola, quisiera hacer una consulta",
+  },
+
+  // --- Sección "Nosotros" ---
+  about: {
+    eyebrow: "Conócenos",
+    titulo: "Nuestra propuesta de valor para ti",
+    parrafo:
+      "En Comercial Josué operamos con un fuerte sentido de responsabilidad social y de mercado, ofreciendo siempre la mejor relación calidad-precio y una atención atenta y honesta.",
+  },
+
+  // --- Tarjetas tipo etiqueta de precio ---
+  tarjetas: [
+    {
+      numero: "01",
+      titulo: "Nuestra Misión",
+      texto:
+        "Somos una empresa comercial sólida, dedicada a atender plenamente las necesidades de nuestros clientes al detalle y por mayor, a través de la comercialización de productos de consumo popular a precios justos.",
+    },
+    {
+      numero: "02",
+      titulo: "Nuestra Visión",
+      texto:
+        "Ser una empresa líder, reconocida en el mercado de productos de consumo popular, garantizando la satisfacción de nuestros clientes a nivel de toda la Zona Oriental del país.",
+    },
+    {
+      numero: "03",
+      titulo: "Nuestra Oferta",
+      texto:
+        "Ofrecemos variedad de productos de primera necesidad al mejor precio del mercado para abastecer tu hogar o tu propio negocio:",
+      badges: ["Granos Básicos", "Jabones", "Detergentes", "Comida Mascotas", "Comestibles"],
+    },
+  ] satisfies TarjetaPrecio[],
+
+  // --- Franja de valores ---
+  valores: {
+    eyebrow: "Pilares fundamentales",
+    titulo: "Nuestros Valores",
+    parrafo: "Nos guiamos por principios éticos sólidos en cada venta y atención al cliente.",
+    chips: [
+      "Fe en Jesucristo sobre todas las cosas",
+      "Orientación al cliente",
+      "Responsabilidad",
+      "Disciplina",
+    ],
+  },
+
+  // --- Ubicación / contacto ---
+  ubicacion: {
+    eyebrow: "Visítanos hoy mismo",
+    titulo: "Estamos para servirte",
+    notaMayoreo:
+      "*¿Deseas cotizar precios al por mayor? Escríbenos directamente o visítanos en nuestra ubicación para darte una oferta personalizada.",
+  },
+
+  direccion: {
+    linea1: "Colonia Santa Carlota, Calle Agua Zarca, San Miguel,",
+    linea2: "500 mt al norte de Parque Memorial El Edén.",
+  },
+
+  mapaQuery: "Colonia Santa Carlota, Calle Agua Zarca, San Miguel, El Salvador",
+
+  // Se arma en tiempo de ejecución con whatsappNumero/email, ver infoItems() abajo.
+
+  // --- Botón flotante ---
+  whatsappFloatMensaje: "Hola, vengo de su sitio web y quisiera más información.",
+
+  // --- Footer ---
+  footer: {
+    copyright: "© 2026 Comercial Josué. Todos los derechos reservados.",
+    credits: "San Miguel, El Salvador",
+  },
+
+  // --- SEO ---
+  seo: {
+    titulo: "Comercial Josué | Número uno en atención y precios",
+    descripcion:
+      "Comercial Josué en San Miguel - Número uno en atención y precios. Venta de granos básicos, productos de consumo popular al detalle y por mayor.",
+    idioma: "es",
+  },
+};
+
+// Arma el link de wa.me con mensaje predefinido
+export function whatsappLink(mensaje: string): string {
+  return `https://wa.me/${siteConfig.whatsappNumero}?text=${encodeURIComponent(mensaje)}`;
+}
+
+// Arma el src del iframe de Google Maps
+export function mapEmbedSrc(): string {
+  const q = encodeURIComponent(siteConfig.mapaQuery);
+  return `https://maps.google.com/maps?q=${q}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+}
+
+// Los 3 ítems de contacto de la sección Ubicación (dirección, email, whatsapp).
+// Se genera como función porque el href de whatsapp depende del helper de arriba.
+export function infoItems(): InfoItem[] {
+  return [
+    {
+      tipo: "ubicacion",
+      label: "Dirección de la sucursal",
+      valor: `${siteConfig.direccion.linea1} ${siteConfig.direccion.linea2}`,
+    },
+    {
+      tipo: "email",
+      label: "Correo electrónico",
+      valor: siteConfig.email,
+      href: `mailto:${siteConfig.email}`,
+    },
+    {
+      tipo: "whatsapp",
+      label: "Atención rápida por WhatsApp",
+      valor: `+503 ${siteConfig.whatsappNumero.slice(-8, -4)}-${siteConfig.whatsappNumero.slice(-4)}`,
+      href: whatsappLink("Hola, quisiera hacer una consulta"),
+    },
+  ];
+}
+</file>
+
+<file path="src/layouts/Layout.astro">
+
+</file>
+
+<file path="src/pages/index.astro">
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import MisionVision from "../components/MisionVision.astro";
+import Valores from "../components/Valores.astro";
+import Ubicacion from "../components/Ubicacion.astro";
+import WhatsAppFloat from "../components/WhatsAppFloat.astro";
+
+---
+
+<Layout>
+  
+  <Hero />
+  <MisionVision />
+  <Valores />
+  <Ubicacion />
+  <WhatsAppFloat />
+  
+</Layout>
+</file>
+
+<file path="src/styles/global.css">
+
+</file>
+
+<file path="tsconfig.json">
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
+}
+</file>
+
+</files>

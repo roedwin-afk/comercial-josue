@@ -1,0 +1,115 @@
+---
+import type { TarjetaPrecio } from "../config/site.ts";
+
+interface Props {
+  tarjeta: TarjetaPrecio;
+}
+
+const { tarjeta } = Astro.props;
+---
+
+<article class="price-tag-card">
+  <span class="card-label">Etiqueta {tarjeta.numero}</span>
+  <h3>{tarjeta.titulo}</h3>
+  <p>{tarjeta.texto}</p>
+
+  {tarjeta.badges && (
+    <div class="tag-product-list">
+      {tarjeta.badges.map((badge) => (
+        <span class="tag-product-badge">{badge}</span>
+      ))}
+    </div>
+  )}
+</article>
+
+<style>
+  .price-tag-card {
+    background-color: var(--white);
+    border: 1px dashed rgba(28, 25, 23, 0.2);
+    border-radius: 12px;
+    padding: 3.5rem 2.5rem 2.5rem 3.5rem; /* extra padding izq para el "hoyo perforado" */
+    position: relative;
+    box-shadow: 0 4px 20px -2px rgba(28, 25, 23, 0.05);
+    transition:
+      transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .price-tag-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px -5px rgba(28, 25, 23, 0.1);
+  }
+
+  /* Hoyo perforado de la etiqueta */
+  .price-tag-card::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--paper);
+    border-radius: 50%;
+    border-right: 1px solid rgba(28, 25, 23, 0.15);
+    box-shadow: inset -2px 0 3px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+  }
+
+  /* Anillo dorado de refuerzo */
+  .price-tag-card::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    z-index: 11;
+    pointer-events: none;
+  }
+
+  .card-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 2px;
+  }
+
+  .price-tag-card h3 {
+    font-size: 1.8rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .price-tag-card p {
+    font-size: 1rem;
+    color: rgba(28, 25, 23, 0.8);
+    line-height: 1.6;
+  }
+
+  .tag-product-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag-product-badge {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    background-color: var(--paper);
+    color: var(--ink);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+</style>

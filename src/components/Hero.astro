@@ -1,0 +1,95 @@
+---
+import { siteConfig, whatsappLink } from "../config/site.ts";
+
+const { hero } = siteConfig;
+---
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="eyebrow">{hero.eyebrow}</span>
+            <h1>
+                {hero.tituloAntes}
+                <span class="highlight">{hero.tituloAcento}</span>
+                {hero.tituloDespues}
+            </h1>
+            <p>{hero.parrafo}</p>
+            <div class="hero-ctas">
+                <a
+                    href={whatsappLink(hero.mensajeWhatsapp)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary"
+                >
+                    <!-- <svg viewBox="0 0 24 24" width="50px" height="50px">
+                        <path
+                            fill="#25D366"
+                            d="M12.035 2C6.513 2 2.036 6.48 2.036 12.01c0 1.956.541 3.824 1.572 5.462L2.14 23.09l5.908-1.551a11.955 11.955 0 005.71 1.453c5.524 0 10.003-4.48 10.003-10.012S17.56 2 12.035 2z"
+                        ></path>
+                        <path
+                            fill="#FFF"
+                            d="M17.433 14.717c-.295-.147-1.75-.865-2.022-.964-.273-.1-.47-.148-.67.15-.198.298-.766.965-.94 1.164-.173.199-.347.225-.643.078-.298-.148-1.254-.463-2.39-1.474-.882-.787-1.48-1.76-1.653-2.059-.173-.297-.018-.457.13-.605.133-.133.298-.346.446-.52.149-.173.198-.298.298-.497.1-.198.05-.371-.024-.52-.075-.148-.669-1.611-.915-2.206-.241-.579-.486-.5-.668-.51-.173-.008-.37-.01-.569-.01-.198 0-.519.074-.791.372-.271.298-1.04 1.017-1.04 2.48 0 1.463 1.065 2.876 1.213 3.074.148.198 2.095 3.2 5.076 4.486.709.306 1.263.49 1.694.626.712.227 1.36.196 1.872.119.571-.085 1.758-.72 1.758-1.428 0-.706-.52-.924-.916-1.121z"
+                        ></path>
+                    </svg> -->
+                    Contactar por WhatsApp
+                </a>
+                <a href="#ubicacion" class="btn btn-secondary">Ver ubicación</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        background-color: var(--ink);
+        color: var(--white);
+        padding-top: calc(var(--header-height) + 4rem);
+        padding-bottom: 6rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+            rgba(214, 168, 74, 0.15) 1px,
+            transparent 1px
+        );
+        background-size: 24px 24px;
+        opacity: 0.4;
+        pointer-events: none;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 7vw, 5.5rem);
+        line-height: 0.95;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero h1 .highlight {
+        color: var(--red);
+        display: inline-block;
+        position: relative;
+    }
+
+    .hero p {
+        font-size: clamp(1.1rem, 2vw, 1.35rem);
+        color: rgba(246, 239, 224, 0.85);
+        margin-bottom: 2.5rem;
+        max-width: 650px;
+    }
+
+    .hero-ctas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+</style>
