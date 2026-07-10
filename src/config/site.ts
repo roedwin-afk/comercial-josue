@@ -33,7 +33,7 @@ export const siteConfig = {
 
     // --- Contacto ---
     whatsappNumero: "50360288004", // ⚠️ pon el número real
-    email: "comercialjosue@gmail.com",
+    email: "superjosue1999lc@gmail.com",
 
     // --- Hero ---
     hero: {
