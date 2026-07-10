@@ -32,7 +32,7 @@ export const siteConfig = {
     ] satisfies NavLink[],
 
     // --- Contacto ---
-    whatsappNumero: "50370000000", // ⚠️ pon el número real
+    whatsappNumero: "50360288004", // ⚠️ pon el número real
     email: "comercialjosue@gmail.com",
 
     // --- Hero ---
